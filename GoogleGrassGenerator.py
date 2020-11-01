@@ -43,6 +43,7 @@ class GoogleGrassGenerator:
             "ha",
             "haw",
             "iw",
+            "he",
             "hi",
             "hmn",
             "hu",
@@ -75,6 +76,7 @@ class GoogleGrassGenerator:
             "my",
             "ne",
             "no",
+            "or",
             "ps",
             "fa",
             "pl",
@@ -103,6 +105,7 @@ class GoogleGrassGenerator:
             "tr",
             "uk",
             "ur",
+            "ug",
             "uz",
             "vi",
             "cy",
@@ -110,7 +113,6 @@ class GoogleGrassGenerator:
             "yi",
             "yo",
             "zu",
-            "he",
         ]
         self.LANGUAGES = LANGUAGES
         self.translator = Translator(service_urls=[

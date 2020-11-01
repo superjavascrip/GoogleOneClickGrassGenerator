@@ -6,7 +6,7 @@ import argparse
 
 '''
 Copyright Github@superjavascrip Bilibili@兰格如同
-Version : 1.0
+Version : 1.1
 '''
 GoogleGrassGenerator = GoogleGrassGenerator.GoogleGrassGenerator()
 parser = argparse.ArgumentParser()
