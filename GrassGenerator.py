@@ -1,5 +1,6 @@
 # coding:utf-8
 import os
+import sys
 
 import GoogleGrassGenerator as GoogleGrassGenerator
 import argparse
@@ -17,11 +18,11 @@ args = parser.parse_args()
 if args.i is None:
     input_text = input("请输入需要生草的文字")
     input_frequency = input("请输入需要生草的次数")
-    if input_text is None:
+    if input_text is None or input_text == "":
         print("请输入文字！！！")
+        sys.exit(0)
     if input_frequency is None or input_frequency == "":
         input_frequency = 20
-        if input_text is not None:
-            print(GoogleGrassGenerator.getRandomGrass(input_text, int(input_frequency)))
+    print(GoogleGrassGenerator.getRandomGrass(input_text, int(input_frequency)))
 elif args.i is not None:
     GoogleGrassGenerator.outputRandomGrassTxt(args.i, args.o, args.f)
