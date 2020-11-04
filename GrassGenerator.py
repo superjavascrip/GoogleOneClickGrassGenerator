@@ -24,5 +24,4 @@ if args.i is None:
         if input_text is not None:
             print(GoogleGrassGenerator.getRandomGrass(input_text, int(input_frequency)))
 elif args.i is not None:
-    if os.path.splitext(args.o)[-1] != "mp3":
-        GoogleGrassGenerator.outputRandomGrassTxt(args.i, args.o, args.f)
+    GoogleGrassGenerator.outputRandomGrassTxt(args.i, args.o, args.f)
