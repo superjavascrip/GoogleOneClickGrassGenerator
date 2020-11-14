@@ -9,3 +9,4 @@
 pip install googletrans
 ```
 更多使用方法可使用-h属性
+###### 本储存库将不会更新，尽请期待 GoogleOneClickGrassGenerator-GUI

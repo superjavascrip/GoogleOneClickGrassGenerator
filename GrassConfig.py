@@ -22,8 +22,8 @@ if args.a is not None:
     JsonConfig.ImportConfig(args.a)
 if args.e is not None:
     if "," in args.e:
-        list = args.e.split(",")
-        print(list)
+        config_list = args.e.split(",")
+        JsonConfig.ExportConfig(config_list, args.n)
     else:
         config_list = []
         config_list.append(args.e)
