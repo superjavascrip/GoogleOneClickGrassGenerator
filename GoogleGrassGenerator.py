@@ -1,10 +1,16 @@
 # coding:utf-8
 import random
 
+'''
+Copyright Github@superjavascrip Bilibili@兰格如同
+Version : 4.0
+'''
 
-class GoogleGrassGenerator:
-    def __init__(self):
+
+class GoogleGrassGenerator(object):
+    def __init__(self, Name):
         from googletrans import Translator
+        import JsonConfig as JsonConfig
         LANGUAGES = [
             "af",
             "sq",
@@ -119,6 +125,7 @@ class GoogleGrassGenerator:
             'translate.google.cn'
         ])
         self.NumberOfLanguages = (len(self.LANGUAGES) - 1)
+        self.JsonConfig = JsonConfig.JsonConfig(Name)
 
     def getRandomGrass(self, OriginalText, frequency):
         Text = OriginalText
@@ -139,3 +146,16 @@ class GoogleGrassGenerator:
         inputText = open(inputTxt, "r", encoding="utf-8").read()
         RandomGrass = self.getRandomGrass(inputText, frequency)
         open(outputTxt, "w+", encoding="utf-8").write(RandomGrass)
+
+    def getConfigGrass(self, OriginalText, frequency, config):
+        Config = self.JsonConfig.ReturnConfig(config)
+        Text = OriginalText
+        for i in range(frequency):
+            for v in Config:
+                Text = self.translator.translate(Text, dest=v, src=self.translator.detect(Text).lang).text
+        return self.translator.translate(Text, dest="zh-cn").text
+
+    def outputConfigGrass(self, inputTxt, outputTxt, frequency, config):
+        inputText = open(inputTxt, "r", encoding="utf-8").read()
+        ConfigGrass = self.getConfigGrass(inputText, frequency, config)
+        open(outputTxt, "w+", encoding="utf-8").write(ConfigGrass)
