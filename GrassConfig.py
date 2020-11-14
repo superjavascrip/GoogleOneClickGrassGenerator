@@ -1,8 +1,6 @@
 import argparse
-import re
 
 import JsonConfig as JsonConfig
-
 
 '''
 Copyright Github@superjavascrip Bilibili@兰格如同
