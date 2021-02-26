@@ -11,4 +11,4 @@ pip install googletrans
 更多使用方法可使用-h属性
 
 
-<a href="https://github.com/superjavascrip/GoogleGrasse">此脚本不在更新，请看看此GUI版本</a>
+<a href="https://github.com/superjavascrip/GoogleGrasser">此脚本不在更新，请看看此GUI版本</a>
