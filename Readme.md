@@ -10,5 +10,5 @@ pip install googletrans
 ```
 更多使用方法可使用-h属性
 
+[此脚本不在更新，请看看此GUI版本](https://github.com/superjavascrip/GoogleGrasser)
 
-<a href="https://github.com/superjavascrip/GoogleGrasser">此脚本不在更新，请看看此GUI版本</a>
